@@ -10,7 +10,7 @@ import LightDarkBtn from "./LightDarkBtn"
 
 const Navbar = () => {
 	// initial state for menu btn
-	const [toggleMenu, setToggleMenu] = useState(true)
+	const [toggleMenu, setToggleMenu] = useState(false)
 	// initial state for dark theme btn
 	const [isDarkMode, setIsDarkMode] = useState(false)
 
@@ -41,7 +41,7 @@ const Navbar = () => {
 	return (
 		<>
 			<div className="navbar bg-white dark:bg-blue-950">
-				<div className="wrapper p-[20px] flex justify-between max-w-[1216px] m-auto lg:p-[30px]">
+				<div className="wrapper p-[20px]  flex justify-between max-w-[1216px] m-auto lg:py-[30px] lg:px-0">
 					{/* LOGO */}
 					<div className="logo text-black dark:text-white text-[20px] leading-[24px] font-semibold">
 						Jayson Romeo
