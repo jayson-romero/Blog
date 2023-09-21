@@ -1,8 +1,11 @@
 import { useState } from "react"
-import Card from "./Card"
+import Card from "../../components/Card"
 import Pagination from "./Pagination"
+import useFetch from "../../utils/useFetch"
 
-const AllBlog = ({ data, isLoading }) => {
+const AllBlog = () => {
+	const { data } = useFetch("http://localhost:3000/posts")
+
 	const postPerPage = 6
 	const [currentPage, setCurrentPage] = useState(1)
 	const totalPosts = data.length

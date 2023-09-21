@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom"
+import Cat from "./Cat"
+
 const Card = ({ blog, index, recentBlog }) => {
 	return (
 		<div
@@ -11,16 +14,17 @@ const Card = ({ blog, index, recentBlog }) => {
 			}`}
 		>
 			{/* IMG */}
-
-			<img
-				src={blog.img}
-				alt=""
-				className={`mb-[24px] object-cover ${
-					(index === 2 || index === 1) && recentBlog === true
-						? "md:max-h-[200px] md:max-w-[320px] h-full  "
-						: "h-[228px] w-full  "
-				}`}
-			/>
+			<Link to={`../${blog.id}`}>
+				<img
+					src={blog.img}
+					alt=""
+					className={`mb-[24px] object-cover ${
+						(index === 2 || index === 1) && recentBlog === true
+							? "md:max-h-[200px] md:max-w-[320px] h-full  "
+							: "h-[228px] w-full  "
+					}`}
+				/>
+			</Link>
 
 			{/* DESC */}
 			<div className="desc">
@@ -41,25 +45,9 @@ const Card = ({ blog, index, recentBlog }) => {
 				</div>
 				<div className="category mt-[24px] flex gap-2">
 					{blog.category.map((cat) => (
-						<div
-							key={cat}
-							className={`${
-								cat === "design"
-									? "bg-[#F9F5FF] text-[#6941C6] border-[#6941C6] "
-									: ""
-							}${
-								cat === "Research"
-									? "bg-[#EEF4FF] text-[#3538CD] border-[#3538CD] "
-									: ""
-							}${
-								cat === "Presentation"
-									? "bg-[#FDF2FA] text-[#C11574] border-[#C11574] "
-									: ""
-							} 
-                        font-medium px-[10px] rounded-full`}
-						>
+						<Cat key={cat} cat={cat}>
 							{cat}
-						</div>
+						</Cat>
 					))}
 				</div>
 			</div>
