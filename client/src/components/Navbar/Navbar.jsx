@@ -44,7 +44,7 @@ const Navbar = () => {
 				<div className="wrapper p-[20px]  flex justify-between max-w-[1216px] m-auto lg:py-[30px] lg:px-0">
 					{/* LOGO */}
 					<div className="logo text-black dark:text-white text-[20px] leading-[24px] font-semibold">
-						Jayson Romeo
+						Jayson Romero
 					</div>
 
 					{/* MENU ICON */}

@@ -3,6 +3,7 @@ import RootLayout from "./Layout/RootLayout"
 // PAGES
 import HomeLayout from "./Layout/HomeLayout"
 import SingleBlogLayout from "./Layout/SingleBlogLayout"
+import PerCatLayout from "./Layout/PerCatLayout"
 
 import Projects from "./pages/Projects/Projects"
 import About from "./pages/About/About"
@@ -23,6 +24,7 @@ function App() {
 				<Route path="/" element={<RootLayout />} errorElement={<ErrorPage />}>
 					<Route index element={<HomeLayout />} />
 					<Route path=":blogId" element={<SingleBlogLayout />} />
+					<Route path="/category/:categoryName" element={<PerCatLayout />} />
 					<Route path="projects" element={<Projects />} />
 					<Route path="about" element={<About />} />
 					<Route path="newsletter" element={<Newsletter />} />

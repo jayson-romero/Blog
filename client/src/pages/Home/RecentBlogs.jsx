@@ -1,16 +1,15 @@
 import Card from "../../components/Card"
 import useFetch from "../../utils/useFetch"
-import { Link, useLocation } from "react-router-dom"
 
 const RecentBlogs = () => {
 	const { data, loading } = useFetch("http://localhost:3000/posts")
-	let { state } = useLocation()
+
 	const filteredData = data.filter((item) => item.recent === true)
 
 	return (
 		<>
 			<div className="recent-blog-post dark:text-white dark:bg-blue-950 px-[20px]">
-				<div className="wrapper max-w-[1216px] m-auto  ">
+				<div className="wrapper max-w-[1216px] m-auto  border-b-2 border-blue-950 dark:border-white py-10 ">
 					<h2 className="text-[24px] font-semibold leading-[32px] mb-[32px]">
 						Recent blog posts
 					</h2>

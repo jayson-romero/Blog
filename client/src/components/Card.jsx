@@ -35,7 +35,7 @@ const Card = ({ blog, index, recentBlog }) => {
 					{blog.title}
 				</div>
 				<div
-					className={`desc dark:text-gray-300 	${
+					className={`desc dark:text-gray-300 indent-8 	${
 						index === 3 && recentBlog === true
 							? "line-clamp-4"
 							: "line-clamp-2 "

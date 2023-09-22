@@ -1,10 +1,14 @@
-import { useState } from "react"
-import Card from "../../components/Card"
-import Pagination from "./Pagination"
 import useFetch from "../../utils/useFetch"
+import { useParams } from "react-router-dom"
+import Card from "../../components/Card"
+import Pagination from "../Home/Pagination"
+import { useState } from "react"
+const PerCategoty = () => {
+	const { categoryName } = useParams()
 
-const AllBlog = () => {
-	const { data, loading } = useFetch("http://localhost:3000/posts")
+	const { data, loading } = useFetch(
+		`http://localhost:3000/posts?category_like=${categoryName}`
+	)
 
 	const postPerPage = 6
 	const [currentPage, setCurrentPage] = useState(1)
@@ -27,13 +31,15 @@ const AllBlog = () => {
 			</div>
 		)
 	}
-
 	return (
 		<>
 			<div className="All-BLog bg-white dark:text-white dark:bg-blue-950 px-[20px] ">
-				<div className="test wrapper max-w-[1216px] m-auto border-b-2 border-blue-950 dark:border-white py-10">
-					<h2 className="text-[24px] font-semibold leading-[32px] mb-[32px]">
-						All blog posts
+				<div className="test wrapper max-w-[1216px] m-auto border-b-2 border-white pb-10">
+					<h2 className="text-[20px] font-semibold leading-[32px] mb-[32px]">
+						Category:{" "}
+						<span className="text-[24px] font-bold leading-[32px] mb-[32px]">
+							{categoryName}
+						</span>
 					</h2>
 					<div className="wrapper md:flex md:flex-row md:jusity-between  md:flex-wrap  gap-2">
 						{data &&
@@ -59,4 +65,4 @@ const AllBlog = () => {
 	)
 }
 
-export default AllBlog
+export default PerCategoty
