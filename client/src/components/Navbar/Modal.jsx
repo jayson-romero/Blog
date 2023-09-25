@@ -6,7 +6,7 @@ const Modal = ({ isDarkMode, toggleDarkMode, setToggleMenu }) => {
 	return (
 		<>
 			{/* MODAL  */}
-			<div className="Modal-menu md:hidden bg-white dark:bg-blue-950 h-screen flex transition duration-150 ease-in-out delay-100">
+			<div className="Modal-menu md:hidden bg-white dark:bg-blue-950 h-screen flex transition duration-150 ease-in-out delay-100 z-40 fixed w-full h-full">
 				<div className="wrapper text-black dark:text-white m-auto flex flex-col items-center justify-center gap-14 text-[24px] font-semibold">
 					{/* MENU ITEMS  */}
 					<NavLink to="/" onClick={() => setToggleMenu(false)}>
