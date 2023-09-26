@@ -5,7 +5,7 @@ import Hero from "../Layout/Hero"
 import useFetch from "../utils/useFetch"
 
 const Home = () => {
-	const { data, loading } = useFetch("http://localhost:3000/posts")
+	const { data, loading } = useFetch("https://all-blog.onrender.com/posts")
 
 	return (
 		<>

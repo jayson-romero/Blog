@@ -7,7 +7,9 @@ import useFetch from "../utils/useFetch"
 
 const SingleBlog = () => {
 	const { blogId } = useParams()
-	const { data, loading } = useFetch(`http://localhost:3000/posts/${blogId}`)
+	const { data, loading } = useFetch(
+		`https://all-blog.onrender.com/posts/${blogId}`
+	)
 
 	return (
 		<>

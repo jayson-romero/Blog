@@ -2,7 +2,7 @@ import Card from "../../components/Card"
 import useFetch from "../../utils/useFetch"
 
 const RecentBlogs = () => {
-	const { data, loading } = useFetch("http://localhost:3000/posts")
+	const { data, loading } = useFetch("https://all-blog.onrender.com/posts")
 	const filteredData = data.filter((item) => item.recent === true)
 
 	return (

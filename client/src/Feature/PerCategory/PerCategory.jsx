@@ -8,7 +8,9 @@ const PerCategory = ({ category, tittle }) => {
 	const { categoryName } = useParams()
 
 	const { data, loading } = useFetch(
-		`http://localhost:3000/posts?category_like=${categoryName || category} `
+		`https://all-blog.onrender.com/posts?category_like=${
+			categoryName || category
+		} `
 	)
 
 	const postPerPage = 6
