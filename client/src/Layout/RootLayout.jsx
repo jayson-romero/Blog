@@ -1,7 +1,6 @@
 import Navbar from "../components/Navbar/Navbar"
 import Footer from "../components/Footer"
 import { Outlet } from "react-router-dom"
-import { BlogItem } from "../Feature/Blogs"
 
 const RootLayout = () => {
 	return (
@@ -13,7 +12,6 @@ const RootLayout = () => {
 				</div>
 			</div>
 			<Footer />
-			<BlogItem />
 		</>
 	)
 }

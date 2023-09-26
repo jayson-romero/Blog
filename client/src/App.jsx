@@ -18,8 +18,6 @@ import {
 	createRoutesFromElements,
 } from "react-router-dom"
 
-import { BlogContextProvider } from "./Feature/Blogs/context/BlogContext"
-
 function App() {
 	const router = createBrowserRouter(
 		createRoutesFromElements(
@@ -38,9 +36,7 @@ function App() {
 
 	return (
 		<>
-			<BlogContextProvider>
-				<RouterProvider router={router} />
-			</BlogContextProvider>
+			<RouterProvider router={router} />
 		</>
 	)
 }
