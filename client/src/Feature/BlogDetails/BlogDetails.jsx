@@ -36,9 +36,8 @@ const BlogDetails = ({ data, loading }) => {
 					<div
 						className={`first-letter:text-4xl first-letter:font-bold first-letter:text-white
 							  dark:text-gray-300  indent-8 whitespace-pre-line leading-loose mt-[20px] `}
-					>
-						{data.desc}
-					</div>
+						dangerouslySetInnerHTML={{ __html: data.desc }}
+					/>
 				</div>
 			</div>
 		</>
